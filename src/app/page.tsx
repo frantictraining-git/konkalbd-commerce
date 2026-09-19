@@ -11,7 +11,7 @@ const CATEGORIES = [
 ]
 
 const MOCK_POPULAR = [
-  { id: 1, name: 'Golden Skull King Bust', variant: 'Gold Silk PLA', price: 3500, image: '/images/golden-skull.jpg' },
+  { id: 1, name: 'Morning Star Statue', variant: 'Exclusive Hand Sculpted', price: 3500, image: '/images/golden-skull.jpg' },
   { id: 2, name: 'The Incredible Hulk Bust', variant: 'Matte Gray Resin', price: 4500, image: '/images/hulk-bust.jpg' },
   { id: 3, name: 'Cacodemon Monster Head', variant: 'Unpainted Resin', price: 1800, image: '/images/cacodemon.jpg' },
   { id: 4, name: 'Upcoming Collectible (WIP)', variant: 'Digital Render', price: 0, image: '/images/hulk-render.jpg' },

@@ -18,7 +18,7 @@ const MOCK_PRODUCTS = [
   { id: 1, name: 'Golden Skull King Bust', variant: 'Gold Silk PLA', price: 3500, image: '/images/golden-skull.jpg' },
   { id: 2, name: 'The Incredible Hulk Bust', variant: 'Matte Gray Resin', price: 4500, image: '/images/hulk-bust.jpg' },
   { id: 3, name: 'Cacodemon Monster Head', variant: 'Unpainted Resin', price: 1800, image: '/images/cacodemon.jpg' },
-  { id: 4, name: 'Hulk Digital Render Concept', variant: 'Digital File / Print', price: 2500, image: '/images/hulk-render.jpg' },
+  { id: 4, name: 'Upcoming Collectible (WIP)', variant: 'Digital Render', price: 0, image: '/images/hulk-render.jpg' },
   { id: 5, name: 'Demon King Desktop Statue', variant: 'Gold Silk PLA', price: 3500, image: '/images/golden-skull.jpg' },
   { id: 6, name: 'Hulk Bust (Large)', variant: 'Gray Filament', price: 5500, image: '/images/hulk-bust.jpg' },
 ]

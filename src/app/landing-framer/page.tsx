@@ -30,7 +30,7 @@ export default function LandingFramer() {
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-black tracking-tighter">
+          <Link href="/" className="text-2xl font-bold tracking-tight">
             KONKAL<span className="text-red-600">.</span>
           </Link>
           <nav className="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
@@ -58,7 +58,7 @@ export default function LandingFramer() {
             <motion.p variants={fadeUp} className="text-red-600 font-bold uppercase tracking-widest text-sm">
               Premium 3D Prints
             </motion.p>
-            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tighter">
+            <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl font-bold leading-[1.05] tracking-tight">
               BRING IDEAS TO LIFE.
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-black/70 max-w-md">
@@ -88,7 +88,7 @@ export default function LandingFramer() {
                 <p className="font-bold text-xl">Hulkenstein Headphone Stand</p>
                 <p className="text-white/60 text-sm mt-1">Matte Gray Finish</p>
               </div>
-              <p className="text-red-500 font-black text-xl">৳ 4,500</p>
+              <p className="text-red-500 font-bold text-xl">৳ 4,500</p>
             </div>
           </motion.div>
         </div>
@@ -121,7 +121,7 @@ export default function LandingFramer() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter">NEW ARRIVALS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">NEW ARRIVALS</h2>
             <p className="mt-4 text-black/60">Our latest exclusive sculpts.</p>
           </motion.div>
 
@@ -161,7 +161,7 @@ export default function LandingFramer() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-red-500 font-bold uppercase tracking-widest text-sm mb-4">Community</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter">WHAT COLLECTORS SAY</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">WHAT COLLECTORS SAY</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1,2,3].map((i) => (
@@ -191,7 +191,7 @@ export default function LandingFramer() {
       {/* HOME PROCESS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-16">HOW IT WORKS</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-16">HOW IT WORKS</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center">
               <div className="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center mb-6">
@@ -222,7 +222,7 @@ export default function LandingFramer() {
       <footer className="bg-black text-white py-16 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
-            <Link href="/" className="text-3xl font-black tracking-tighter">
+            <Link href="/" className="text-3xl font-bold tracking-tight">
               KONKAL<span className="text-red-600">.</span>
             </Link>
             <p className="text-white/60 mt-4 max-w-xs">Premium 3D prints and exclusive designs made in Bangladesh.</p>

@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react'
 // Animations
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 }
 
 const staggerContainer = {
@@ -82,7 +82,7 @@ export default function LandingFramer() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="flex-1 relative mt-16 md:mt-0 w-full max-w-lg aspect-square"
         >
           {/* Abstract Red/Black Shapes behind the image */}

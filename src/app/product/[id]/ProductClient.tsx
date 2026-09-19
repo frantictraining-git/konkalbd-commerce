@@ -10,18 +10,18 @@ import { useRouter } from 'next/navigation'
 
 const MOCK_PRODUCT = {
   id: '1',
-  name: 'Golden Skull King Bust',
-  price: 3500,
-  description: 'An intricately detailed Golden Skull King bust, 3D printed in premium gold silk PLA. Perfect for dark fantasy collectors, tabletop gamers, or as a striking desk centerpiece. Features sharp halo spikes and ornate armor detailing.',
+  name: 'Life-Size Hulkenstein Headphone Stand',
+  price: 4500,
+  description: 'Is this a show piece or is this a headphone stand? It\'s a life-size Hulkenstein head that can be used as either one! A massive, premium 3D printed statement piece. Available now exclusively on Konkal!',
   images: [
-    '/images/golden-skull.jpg',
     '/images/hulk-bust.jpg',
+    '/images/golden-skull.jpg',
     '/images/cacodemon.jpg',
   ],
   variants: [
-    { id: 'v1', name: 'Gold Silk PLA (Standard)', priceAdjustment: 0 },
-    { id: 'v2', name: 'Matte Black', priceAdjustment: -300 },
-    { id: 'v3', name: 'Marble Texture', priceAdjustment: 200 },
+    { id: 'v1', name: 'Matte Gray (Standard)', priceAdjustment: 0 },
+    { id: 'v2', name: 'Hulk Green', priceAdjustment: 500 },
+    { id: 'v3', name: 'Hand Painted', priceAdjustment: 2500 },
   ],
   sizes: [
     { id: 's1', name: 'Small (15cm)', priceAdjustment: 0 },

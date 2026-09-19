@@ -39,10 +39,10 @@ export default function Home() {
           </div>
           <div className="flex-1 w-full aspect-square md:aspect-auto md:h-[500px] bg-background/10 rounded-2xl flex items-center justify-center border border-accent/40 shadow-2xl relative overflow-hidden">
             {/* Mock Hero Product Image */}
-            <img src="/images/golden-skull.jpg" alt="Golden Skull King 3D Print" className="object-cover w-full h-full opacity-90" />
+            <img src="/images/hulk-bust.jpg" alt="Life-size Hulkenstein Headphone Stand" className="object-cover w-full h-full opacity-90" />
             <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur text-foreground p-4 rounded-lg shadow-lg">
-              <h3 className="font-bold">Featured: Golden Skull King</h3>
-              <p className="text-sm">Gold Silk Finish • ৳ 3,500</p>
+              <h3 className="font-bold">Featured: Hulkenstein Headphone Stand</h3>
+              <p className="text-sm">Life-Size Statement Piece • ৳ 4,500</p>
             </div>
           </div>
         </div>

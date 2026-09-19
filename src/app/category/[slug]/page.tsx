@@ -15,12 +15,12 @@ export function generateStaticParams() {
 }
 
 const MOCK_PRODUCTS = [
-  { id: 1, name: 'Geometric Lion Head', variant: 'Matte Black', price: 1200, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Lion+Head' },
-  { id: 2, name: 'Minimalist Vase set', variant: 'Off-White', price: 850, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Vase' },
-  { id: 3, name: 'Custom Name Plate', variant: 'Gold Finish', price: 1500, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Name+Plate' },
-  { id: 4, name: 'Anime Figurine', variant: 'Hand Painted', price: 2500, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Anime' },
-  { id: 5, name: 'Abstract Planter', variant: 'Stone Texture', price: 950, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Planter' },
-  { id: 6, name: '3D Printed Lamp', variant: 'Warm Glow', price: 3200, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Lamp' },
+  { id: 1, name: 'Golden Skull King Bust', variant: 'Gold Silk PLA', price: 3500, image: '/images/golden-skull.jpg' },
+  { id: 2, name: 'The Incredible Hulk Bust', variant: 'Matte Gray Resin', price: 4500, image: '/images/hulk-bust.jpg' },
+  { id: 3, name: 'Cacodemon Monster Head', variant: 'Unpainted Resin', price: 1800, image: '/images/cacodemon.jpg' },
+  { id: 4, name: 'Hulk Digital Render Concept', variant: 'Digital File / Print', price: 2500, image: '/images/hulk-render.jpg' },
+  { id: 5, name: 'Demon King Desktop Statue', variant: 'Gold Silk PLA', price: 3500, image: '/images/golden-skull.jpg' },
+  { id: 6, name: 'Hulk Bust (Large)', variant: 'Gray Filament', price: 5500, image: '/images/hulk-bust.jpg' },
 ]
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {

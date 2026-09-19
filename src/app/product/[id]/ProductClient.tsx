@@ -10,18 +10,18 @@ import { useRouter } from 'next/navigation'
 
 const MOCK_PRODUCT = {
   id: '1',
-  name: 'Geometric Lion Head',
-  price: 1200,
-  description: 'A striking geometric lion head, 3D printed with premium PLA. Perfect for modern living rooms, offices, and studios. Lightweight and easy to mount.',
+  name: 'Golden Skull King Bust',
+  price: 3500,
+  description: 'An intricately detailed Golden Skull King bust, 3D printed in premium gold silk PLA. Perfect for dark fantasy collectors, tabletop gamers, or as a striking desk centerpiece. Features sharp halo spikes and ornate armor detailing.',
   images: [
-    'https://placehold.co/800x1000/1e3a8a/ffffff?text=Lion+Head+1',
-    'https://placehold.co/800x1000/1e3a8a/ffffff?text=Lion+Head+2',
-    'https://placehold.co/800x1000/1e3a8a/ffffff?text=Lion+Head+3',
+    '/images/golden-skull.jpg',
+    '/images/hulk-bust.jpg',
+    '/images/cacodemon.jpg',
   ],
   variants: [
-    { id: 'v1', name: 'Matte Black (Standard)', priceAdjustment: 0 },
-    { id: 'v2', name: 'Silk Gold Finish', priceAdjustment: 300 },
-    { id: 'v3', name: 'Marble Texture', priceAdjustment: 500 },
+    { id: 'v1', name: 'Gold Silk PLA (Standard)', priceAdjustment: 0 },
+    { id: 'v2', name: 'Matte Black', priceAdjustment: -300 },
+    { id: 'v3', name: 'Marble Texture', priceAdjustment: 200 },
   ],
   sizes: [
     { id: 's1', name: 'Small (15cm)', priceAdjustment: 0 },

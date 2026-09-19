@@ -11,10 +11,10 @@ const CATEGORIES = [
 ]
 
 const MOCK_POPULAR = [
-  { id: 1, name: 'Geometric Lion Head', variant: 'Matte Black', price: 1200, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Lion+Head' },
-  { id: 2, name: 'Minimalist Vase set', variant: 'Off-White', price: 850, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Vase' },
-  { id: 3, name: 'Custom Name Plate', variant: 'Gold Finish', price: 1500, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Name+Plate' },
-  { id: 4, name: 'Anime Figurine', variant: 'Hand Painted', price: 2500, image: 'https://placehold.co/400x500/1e3a8a/ffffff?text=Anime' },
+  { id: 1, name: 'Golden Skull King Bust', variant: 'Gold Silk PLA', price: 3500, image: '/images/golden-skull.jpg' },
+  { id: 2, name: 'The Incredible Hulk Bust', variant: 'Matte Gray Resin', price: 4500, image: '/images/hulk-bust.jpg' },
+  { id: 3, name: 'Cacodemon Monster Head', variant: 'Unpainted Resin', price: 1800, image: '/images/cacodemon.jpg' },
+  { id: 4, name: 'Hulk Digital Render Concept', variant: 'Digital File / Print', price: 2500, image: '/images/hulk-render.jpg' },
 ]
 
 export default function Home() {
@@ -37,12 +37,12 @@ export default function Home() {
               Shop the Collection <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
-          <div className="flex-1 w-full aspect-square md:aspect-auto md:h-[500px] bg-background/10 rounded-2xl flex items-center justify-center border border-white/20 shadow-2xl relative overflow-hidden">
+          <div className="flex-1 w-full aspect-square md:aspect-auto md:h-[500px] bg-background/10 rounded-2xl flex items-center justify-center border border-accent/40 shadow-2xl relative overflow-hidden">
             {/* Mock Hero Product Image */}
-            <img src="https://placehold.co/800x800/1e3a8a/ffffff?text=Hero+Product" alt="Hero 3D Product" className="object-cover w-full h-full opacity-80" />
+            <img src="/images/golden-skull.jpg" alt="Golden Skull King 3D Print" className="object-cover w-full h-full opacity-90" />
             <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur text-foreground p-4 rounded-lg shadow-lg">
-              <h3 className="font-bold">Featured: Artisan Dragon</h3>
-              <p className="text-sm">Silk Gold Finish • ৳ 3,200</p>
+              <h3 className="font-bold">Featured: Golden Skull King</h3>
+              <p className="text-sm">Gold Silk Finish • ৳ 3,500</p>
             </div>
           </div>
         </div>

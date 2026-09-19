@@ -59,12 +59,12 @@ export default function ProductClient({ id }: { id: string }) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Breadcrumbs */}
-      <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+      <div className="flex items-center gap-2 text-sm text-foreground/50 mb-8">
         <Link href="/" className="hover:text-primary">Home</Link>
         <span>/</span>
         <Link href="/category/home-decor" className="hover:text-primary">Home Decor</Link>
         <span>/</span>
-        <span className="text-gray-900 font-medium">{MOCK_PRODUCT.name}</span>
+        <span className="text-foreground font-medium">{MOCK_PRODUCT.name}</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -82,7 +82,7 @@ export default function ProductClient({ id }: { id: string }) {
             ))}
           </div>
           <div 
-            className="flex-1 bg-gray-100 rounded-xl overflow-hidden relative cursor-zoom-in group"
+            className="flex-1 bg-accent/20 rounded-xl overflow-hidden relative cursor-zoom-in group"
             onClick={() => setIsZoomed(!isZoomed)}
           >
             <img 
@@ -98,7 +98,7 @@ export default function ProductClient({ id }: { id: string }) {
           <h1 className="text-3xl font-bold mb-2">{MOCK_PRODUCT.name}</h1>
           <p className="text-2xl font-bold text-primary mb-6">৳ {finalPrice.toLocaleString()}</p>
           
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <p className="text-foreground/70 mb-8 leading-relaxed">
             {MOCK_PRODUCT.description}
           </p>
 
@@ -107,7 +107,7 @@ export default function ProductClient({ id }: { id: string }) {
             <div>
               <div className="flex justify-between mb-2">
                 <span className="font-semibold">Finish</span>
-                <span className="text-sm text-gray-500">{selectedVariant.name}</span>
+                <span className="text-sm text-foreground/50">{selectedVariant.name}</span>
               </div>
               <div className="flex flex-wrap gap-3">
                 {MOCK_PRODUCT.variants.map(variant => (
@@ -117,7 +117,7 @@ export default function ProductClient({ id }: { id: string }) {
                     className={`px-4 py-2 border rounded-md text-sm transition-colors ${
                       selectedVariant.id === variant.id 
                         ? 'border-primary bg-primary/5 font-semibold text-primary' 
-                        : 'border-gray-200 hover:border-primary/50 text-gray-600'
+                        : 'border-accent/40 hover:border-primary/50 text-foreground/70'
                     }`}
                   >
                     {variant.name}
@@ -130,7 +130,7 @@ export default function ProductClient({ id }: { id: string }) {
             <div>
               <div className="flex justify-between mb-2">
                 <span className="font-semibold">Size</span>
-                <span className="text-sm text-gray-500">{selectedSize.name}</span>
+                <span className="text-sm text-foreground/50">{selectedSize.name}</span>
               </div>
               <div className="flex flex-wrap gap-3">
                 {MOCK_PRODUCT.sizes.map(size => (
@@ -140,7 +140,7 @@ export default function ProductClient({ id }: { id: string }) {
                     className={`px-4 py-2 border rounded-md text-sm transition-colors ${
                       selectedSize.id === size.id 
                         ? 'border-primary bg-primary/5 font-semibold text-primary' 
-                        : 'border-gray-200 hover:border-primary/50 text-gray-600'
+                        : 'border-accent/40 hover:border-primary/50 text-foreground/70'
                     }`}
                   >
                     {size.name}
@@ -154,18 +154,18 @@ export default function ProductClient({ id }: { id: string }) {
             <button onClick={handleAddToCart} className="flex-1 bg-primary text-primary-foreground font-bold py-4 rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
               <ShoppingBag className="w-5 h-5" /> Add to Cart
             </button>
-            <button className="w-14 h-14 border border-gray-200 rounded-md flex items-center justify-center hover:text-red-500 hover:border-red-200 transition-colors">
+            <button className="w-14 h-14 border border-accent/40 rounded-md flex items-center justify-center hover:text-red-500 hover:border-red-200 transition-colors">
               <Heart className="w-6 h-6" />
             </button>
           </div>
 
           {/* Trust Signals */}
-          <div className="bg-gray-50 rounded-lg p-4 space-y-3 border border-gray-100">
-            <div className="flex items-center gap-3 text-sm text-gray-700">
+          <div className="bg-accent/10 rounded-lg p-4 space-y-3 border border-accent/20">
+            <div className="flex items-center gap-3 text-sm text-foreground/80">
               <Truck className="w-5 h-5 text-green-600" />
               <span>Estimated Delivery: <strong>3-5 Days</strong> (Inside Dhaka), <strong>5-7 Days</strong> (Outside)</span>
             </div>
-            <div className="flex items-center gap-3 text-sm text-gray-700">
+            <div className="flex items-center gap-3 text-sm text-foreground/80">
               <ShieldCheck className="w-5 h-5 text-blue-600" />
               <span>Quality Guaranteed. Made with biodegradable PLA.</span>
             </div>

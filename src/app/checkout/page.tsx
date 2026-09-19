@@ -41,7 +41,7 @@ export default function CheckoutPage() {
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h1 className="text-3xl font-bold mb-4">Order Received!</h1>
-        <p className="text-gray-600 mb-8">
+        <p className="text-foreground/70 mb-8">
           Thank you for your purchase. We have received your order and payment details. 
           You will receive a confirmation call shortly.
         </p>
@@ -74,21 +74,21 @@ export default function CheckoutPage() {
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-8">
           {/* Shipping Details */}
-          <section className="bg-white p-6 rounded-xl border border-gray-200">
+          <section className="bg-background p-6 rounded-xl border border-accent/40">
             <h2 className="text-xl font-bold mb-6">Delivery Details</h2>
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                <input required type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="Enter your full name" />
+                <label className="block text-sm font-medium text-foreground/80 mb-1">Full Name</label>
+                <input required type="text" className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="Enter your full name" />
               </div>
               <div className="col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                <input required type="tel" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="01XXX-XXXXXX" />
+                <label className="block text-sm font-medium text-foreground/80 mb-1">Phone Number</label>
+                <input required type="tel" className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="01XXX-XXXXXX" />
               </div>
               <div className="col-span-1">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Division</label>
+                <label className="block text-sm font-medium text-foreground/80 mb-1">Division</label>
                 <select 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary"
+                  className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary"
                   value={division}
                   onChange={(e) => setDivision(e.target.value)}
                 >
@@ -96,57 +96,57 @@ export default function CheckoutPage() {
                 </select>
               </div>
               <div className="col-span-1">
-                <label className="block text-sm font-medium text-gray-700 mb-1">District</label>
-                <input required type="text" className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="e.g. Gazipur" />
+                <label className="block text-sm font-medium text-foreground/80 mb-1">District</label>
+                <input required type="text" className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="e.g. Gazipur" />
               </div>
               <div className="col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Full Address (House, Road, Area)</label>
-                <textarea required rows={3} className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="Detailed address for the delivery man..."></textarea>
+                <label className="block text-sm font-medium text-foreground/80 mb-1">Full Address (House, Road, Area)</label>
+                <textarea required rows={3} className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary" placeholder="Detailed address for the delivery man..."></textarea>
               </div>
             </div>
           </section>
 
           {/* Payment Method */}
-          <section className="bg-white p-6 rounded-xl border border-gray-200">
+          <section className="bg-background p-6 rounded-xl border border-accent/40">
             <h2 className="text-xl font-bold mb-6">Payment Method</h2>
             <div className="space-y-4">
-              <label className={`block border rounded-lg p-4 cursor-pointer transition-colors ${paymentMethod === 'bKash' ? 'border-primary bg-primary/5' : 'border-gray-200'}`}>
+              <label className={`block border rounded-lg p-4 cursor-pointer transition-colors ${paymentMethod === 'bKash' ? 'border-primary bg-primary/5' : 'border-accent/40'}`}>
                 <div className="flex items-center gap-3">
                   <input type="radio" name="payment" value="bKash" checked={paymentMethod === 'bKash'} onChange={() => setPaymentMethod('bKash')} className="text-primary focus:ring-primary" />
                   <span className="font-medium">bKash (Send Money)</span>
                 </div>
                 {paymentMethod === 'bKash' && (
-                  <div className="mt-4 pl-7 text-sm text-gray-600 space-y-3">
+                  <div className="mt-4 pl-7 text-sm text-foreground/70 space-y-3">
                     <p>1. Send Money to <strong>01711-XXXXXX</strong> (Personal)</p>
                     <p>2. Enter your TrxID below to confirm your order.</p>
-                    <input required type="text" placeholder="bKash TrxID (e.g. 9F6A2B...)" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-2" />
+                    <input required type="text" placeholder="bKash TrxID (e.g. 9F6A2B...)" className="w-full border border-accent/60 rounded-md px-3 py-2 mt-2" />
                   </div>
                 )}
               </label>
 
-              <label className={`block border rounded-lg p-4 cursor-pointer transition-colors ${paymentMethod === 'Nagad' ? 'border-primary bg-primary/5' : 'border-gray-200'}`}>
+              <label className={`block border rounded-lg p-4 cursor-pointer transition-colors ${paymentMethod === 'Nagad' ? 'border-primary bg-primary/5' : 'border-accent/40'}`}>
                 <div className="flex items-center gap-3">
                   <input type="radio" name="payment" value="Nagad" checked={paymentMethod === 'Nagad'} onChange={() => setPaymentMethod('Nagad')} className="text-primary focus:ring-primary" />
                   <span className="font-medium">Nagad (Send Money)</span>
                 </div>
                 {paymentMethod === 'Nagad' && (
-                  <div className="mt-4 pl-7 text-sm text-gray-600 space-y-3">
+                  <div className="mt-4 pl-7 text-sm text-foreground/70 space-y-3">
                     <p>1. Send Money to <strong>01711-XXXXXX</strong> (Personal)</p>
                     <p>2. Enter your TrxID below.</p>
-                    <input required type="text" placeholder="Nagad TrxID" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-2" />
+                    <input required type="text" placeholder="Nagad TrxID" className="w-full border border-accent/60 rounded-md px-3 py-2 mt-2" />
                   </div>
                 )}
               </label>
 
-              <label className={`block border rounded-lg p-4 cursor-pointer transition-colors ${paymentMethod === 'COD' ? 'border-primary bg-primary/5' : 'border-gray-200'}`}>
+              <label className={`block border rounded-lg p-4 cursor-pointer transition-colors ${paymentMethod === 'COD' ? 'border-primary bg-primary/5' : 'border-accent/40'}`}>
                 <div className="flex items-center gap-3">
                   <input type="radio" name="payment" value="COD" checked={paymentMethod === 'COD'} onChange={() => setPaymentMethod('COD')} className="text-primary focus:ring-primary" />
                   <span className="font-medium">Cash on Delivery (Advance Delivery Fee Required)</span>
                 </div>
                 {paymentMethod === 'COD' && (
-                  <div className="mt-4 pl-7 text-sm text-gray-600">
+                  <div className="mt-4 pl-7 text-sm text-foreground/70">
                     <p>To confirm COD, please send the delivery fee (৳ {deliveryFee}) to our bKash number and enter the TrxID.</p>
-                    <input required type="text" placeholder="TrxID for Delivery Fee" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-3" />
+                    <input required type="text" placeholder="TrxID for Delivery Fee" className="w-full border border-accent/60 rounded-md px-3 py-2 mt-3" />
                   </div>
                 )}
               </label>
@@ -156,19 +156,19 @@ export default function CheckoutPage() {
 
         {/* Order Summary sidebar */}
         <div className="lg:col-span-1">
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 sticky top-24">
+          <div className="bg-accent/10 rounded-xl p-6 border border-accent/20 sticky top-24">
             <h2 className="text-lg font-bold mb-6">Order Summary</h2>
             
             <div className="space-y-4 mb-6 max-h-[40vh] overflow-y-auto pr-2">
               {items.map((item) => (
                 <div key={item.id} className="flex gap-4 text-sm">
-                  <div className="w-16 h-16 bg-white rounded-md overflow-hidden border border-gray-200 flex-none relative">
+                  <div className="w-16 h-16 bg-background rounded-md overflow-hidden border border-accent/40 flex-none relative">
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    <span className="absolute -top-2 -right-2 bg-gray-500 text-white w-5 h-5 flex items-center justify-center rounded-full text-xs">{item.quantity}</span>
+                    <span className="absolute -top-2 -right-2 bg-accent/100 text-white w-5 h-5 flex items-center justify-center rounded-full text-xs">{item.quantity}</span>
                   </div>
                   <div className="flex-1">
                     <p className="font-medium line-clamp-1">{item.name}</p>
-                    <p className="text-gray-500 text-xs mt-1">{item.variantName}</p>
+                    <p className="text-foreground/50 text-xs mt-1">{item.variantName}</p>
                   </div>
                   <div className="font-medium text-right">
                     ৳ {(item.price * item.quantity).toLocaleString()}
@@ -177,18 +177,18 @@ export default function CheckoutPage() {
               ))}
             </div>
 
-            <div className="space-y-3 text-sm mb-6 border-t border-gray-200 pt-6">
+            <div className="space-y-3 text-sm mb-6 border-t border-accent/40 pt-6">
               <div className="flex justify-between">
-                <span className="text-gray-600">Subtotal</span>
+                <span className="text-foreground/70">Subtotal</span>
                 <span className="font-medium">৳ {getTotal().toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Delivery Fee ({division})</span>
+                <span className="text-foreground/70">Delivery Fee ({division})</span>
                 <span className="font-medium">৳ {deliveryFee}</span>
               </div>
             </div>
 
-            <div className="flex justify-between text-xl font-bold mb-8 border-t border-gray-200 pt-6">
+            <div className="flex justify-between text-xl font-bold mb-8 border-t border-accent/40 pt-6">
               <span>Total</span>
               <span className="text-primary">৳ {finalTotal.toLocaleString()}</span>
             </div>

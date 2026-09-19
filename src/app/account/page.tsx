@@ -63,30 +63,30 @@ export default function AccountPage() {
   if (!user) {
     return (
       <div className="container mx-auto px-4 py-16 max-w-md">
-        <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+        <div className="bg-background p-8 rounded-xl border border-accent/40 shadow-sm">
           <h1 className="text-2xl font-bold mb-6 text-center">{isLogin ? 'Welcome Back' : 'Create Account'}</h1>
           
           {error && <div className="bg-red-50 text-red-600 p-3 rounded-md text-sm mb-4">{error}</div>}
           
           <form onSubmit={handleAuth} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <label className="block text-sm font-medium text-foreground/80 mb-1">Email</label>
               <input 
                 type="email" 
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary"
+                className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+              <label className="block text-sm font-medium text-foreground/80 mb-1">Password</label>
               <input 
                 type="password" 
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary"
+                className="w-full border border-accent/60 rounded-md px-4 py-2 focus:ring-primary focus:border-primary"
               />
             </div>
             <button type="submit" className="w-full bg-primary text-primary-foreground font-bold py-3 rounded-md hover:bg-primary/90 transition-colors">
@@ -95,7 +95,7 @@ export default function AccountPage() {
           </form>
 
           <div className="mt-6 text-center text-sm">
-            <span className="text-gray-600">{isLogin ? "Don't have an account?" : "Already have an account?"}</span>
+            <span className="text-foreground/70">{isLogin ? "Don't have an account?" : "Already have an account?"}</span>
             <button onClick={() => setIsLogin(!isLogin)} className="ml-2 font-bold text-primary hover:underline">
               {isLogin ? 'Sign up' : 'Sign in'}
             </button>
@@ -111,13 +111,13 @@ export default function AccountPage() {
         
         {/* Sidebar */}
         <div className="w-full md:w-64 flex-none space-y-6">
-          <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+          <div className="bg-accent/10 p-6 rounded-xl border border-accent/20">
             <h2 className="font-bold text-lg mb-1">My Account</h2>
-            <p className="text-sm text-gray-500 mb-6 truncate">{user.email}</p>
+            <p className="text-sm text-foreground/50 mb-6 truncate">{user.email}</p>
             
             <nav className="space-y-2">
               <a href="#" className="block px-4 py-2 bg-primary/10 text-primary font-medium rounded-md">Order History</a>
-              <a href="#" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Account Settings</a>
+              <a href="#" className="block px-4 py-2 text-foreground/70 hover:bg-accent/20 rounded-md">Account Settings</a>
             </nav>
 
             <button 
@@ -135,18 +135,18 @@ export default function AccountPage() {
 
           <div className="space-y-6">
             {MOCK_ORDERS.map((order) => (
-              <div key={order.id} className="border border-gray-200 rounded-xl overflow-hidden">
-                <div className="bg-gray-50 p-4 border-b border-gray-200 flex flex-wrap justify-between items-center gap-4 text-sm">
+              <div key={order.id} className="border border-accent/40 rounded-xl overflow-hidden">
+                <div className="bg-accent/10 p-4 border-b border-accent/40 flex flex-wrap justify-between items-center gap-4 text-sm">
                   <div>
-                    <p className="text-gray-500">Order Placed</p>
+                    <p className="text-foreground/50">Order Placed</p>
                     <p className="font-medium">{order.date}</p>
                   </div>
                   <div>
-                    <p className="text-gray-500">Total</p>
+                    <p className="text-foreground/50">Total</p>
                     <p className="font-medium">৳ {order.total.toLocaleString()}</p>
                   </div>
                   <div>
-                    <p className="text-gray-500">Order ID</p>
+                    <p className="text-foreground/50">Order ID</p>
                     <p className="font-medium">{order.id}</p>
                   </div>
                 </div>
@@ -168,18 +168,18 @@ export default function AccountPage() {
                       <div key={idx} className="flex justify-between text-sm">
                         <div className="flex-1">
                           <p className="font-medium">{item.name}</p>
-                          <p className="text-gray-500">{item.variant} • Qty: {item.qty}</p>
+                          <p className="text-foreground/50">{item.variant} • Qty: {item.qty}</p>
                         </div>
                         <p className="font-medium">৳ {item.price.toLocaleString()}</p>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-gray-100 flex gap-4">
+                  <div className="mt-6 pt-6 border-t border-accent/20 flex gap-4">
                     <button className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors">
                       Track Order
                     </button>
-                    <button className="px-4 py-2 border border-gray-200 text-gray-700 text-sm font-medium rounded-md hover:bg-gray-50 transition-colors">
+                    <button className="px-4 py-2 border border-accent/40 text-foreground/80 text-sm font-medium rounded-md hover:bg-accent/10 transition-colors">
                       View Invoice
                     </button>
                   </div>

@@ -20,8 +20,8 @@ export default function CartPage() {
       <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
 
       {items.length === 0 ? (
-        <div className="text-center py-16 bg-gray-50 rounded-lg border border-gray-100">
-          <p className="text-gray-500 mb-6 text-lg">Your cart is currently empty.</p>
+        <div className="text-center py-16 bg-accent/10 rounded-lg border border-accent/20">
+          <p className="text-foreground/50 mb-6 text-lg">Your cart is currently empty.</p>
           <Link href="/category/bestsellers" className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-bold hover:bg-primary/90 transition-colors inline-block">
             Start Shopping
           </Link>
@@ -30,8 +30,8 @@ export default function CartPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-6">
             {items.map((item) => (
-              <div key={item.id} className="flex gap-4 md:gap-6 border-b border-gray-100 pb-6">
-                <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-md overflow-hidden flex-none">
+              <div key={item.id} className="flex gap-4 md:gap-6 border-b border-accent/20 pb-6">
+                <div className="w-24 h-24 md:w-32 md:h-32 bg-accent/20 rounded-md overflow-hidden flex-none">
                   <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-between">
@@ -40,21 +40,21 @@ export default function CartPage() {
                       <h3 className="font-semibold text-lg line-clamp-1">{item.name}</h3>
                       <p className="font-bold whitespace-nowrap ml-4">৳ {(item.price * item.quantity).toLocaleString()}</p>
                     </div>
-                    <p className="text-sm text-gray-500 mt-1">{item.variantName} • {item.sizeName}</p>
+                    <p className="text-sm text-foreground/50 mt-1">{item.variantName} • {item.sizeName}</p>
                   </div>
                   
                   <div className="flex items-center justify-between mt-4">
-                    <div className="flex items-center border border-gray-200 rounded-md">
+                    <div className="flex items-center border border-accent/40 rounded-md">
                       <button 
                         onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
-                        className="p-2 hover:bg-gray-50"
+                        className="p-2 hover:bg-accent/10"
                       >
                         <Minus className="w-4 h-4" />
                       </button>
                       <span className="w-10 text-center text-sm font-medium">{item.quantity}</span>
                       <button 
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="p-2 hover:bg-gray-50"
+                        className="p-2 hover:bg-accent/10"
                       >
                         <Plus className="w-4 h-4" />
                       </button>
@@ -72,17 +72,17 @@ export default function CartPage() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 sticky top-24">
+            <div className="bg-accent/10 rounded-xl p-6 border border-accent/20 sticky top-24">
               <h2 className="text-lg font-bold mb-6">Order Summary</h2>
               
-              <div className="space-y-4 text-sm mb-6 border-b border-gray-200 pb-6">
+              <div className="space-y-4 text-sm mb-6 border-b border-accent/40 pb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Subtotal</span>
+                  <span className="text-foreground/70">Subtotal</span>
                   <span className="font-medium">৳ {getTotal().toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Delivery</span>
-                  <span className="text-gray-500">Calculated at checkout</span>
+                  <span className="text-foreground/70">Delivery</span>
+                  <span className="text-foreground/50">Calculated at checkout</span>
                 </div>
               </div>
 

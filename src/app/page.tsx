@@ -32,12 +32,12 @@ export default function Home() {
             </p>
             <Link 
               href="/category/bestsellers"
-              className="inline-flex items-center justify-center bg-accent text-primary font-bold px-8 py-4 rounded-md hover:bg-yellow-400 transition-colors"
+              className="inline-flex items-center justify-center bg-background text-foreground font-bold px-8 py-4 rounded-md hover:bg-background/90 transition-colors border border-accent/40"
             >
               Shop the Collection <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
-          <div className="flex-1 w-full aspect-square md:aspect-auto md:h-[500px] bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 shadow-2xl relative overflow-hidden">
+          <div className="flex-1 w-full aspect-square md:aspect-auto md:h-[500px] bg-background/10 rounded-2xl flex items-center justify-center border border-white/20 shadow-2xl relative overflow-hidden">
             {/* Mock Hero Product Image */}
             <img src="https://placehold.co/800x800/1e3a8a/ffffff?text=Hero+Product" alt="Hero 3D Product" className="object-cover w-full h-full opacity-80" />
             <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur text-foreground p-4 rounded-lg shadow-lg">
@@ -55,7 +55,7 @@ export default function Home() {
             <Link 
               key={cat.slug} 
               href={`/category/${cat.slug}`}
-              className="flex-none bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-full transition-colors whitespace-nowrap border border-gray-200"
+              className="flex-none bg-accent/20 hover:bg-gray-200 text-foreground font-medium px-6 py-3 rounded-full transition-colors whitespace-nowrap border border-accent/40"
             >
               {cat.name}
             </Link>
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {MOCK_POPULAR.map((product) => (
             <Link href={`/product/${product.id}`} key={product.id} className="group flex flex-col gap-3">
-              <div className="aspect-[4/5] bg-gray-100 rounded-lg overflow-hidden relative border border-gray-200">
+              <div className="aspect-[4/5] bg-accent/20 rounded-lg overflow-hidden relative border border-accent/40">
                 <img 
                   src={product.image} 
                   alt={product.name} 
@@ -83,7 +83,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{product.name}</h3>
-                <p className="text-sm text-gray-500">{product.variant}</p>
+                <p className="text-sm text-foreground/50">{product.variant}</p>
                 <p className="mt-1 font-bold">৳ {product.price.toLocaleString()}</p>
               </div>
             </Link>
@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* 3-STEP PROCESS */}
-      <section className="bg-gray-50 py-16 border-y border-gray-200">
+      <section className="bg-accent/10 py-16 border-y border-accent/40">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -104,7 +104,7 @@ export default function Home() {
                 <CreditCard className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">1. Choose & Pay</h3>
-              <p className="text-gray-600">Select your design and pay securely via bKash or Nagad.</p>
+              <p className="text-foreground/70">Select your design and pay securely via bKash or Nagad.</p>
             </div>
             
             <div className="flex flex-col items-center text-center relative z-10">
@@ -112,7 +112,7 @@ export default function Home() {
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">2. We Print & Check</h3>
-              <p className="text-gray-600">Your order is 3D printed and passes our strict quality check.</p>
+              <p className="text-foreground/70">Your order is 3D printed and passes our strict quality check.</p>
             </div>
             
             <div className="flex flex-col items-center text-center relative z-10">
@@ -120,7 +120,7 @@ export default function Home() {
                 <Truck className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">3. Delivered by Pathao</h3>
-              <p className="text-gray-600">Fast, tracked delivery right to your doorstep across BD.</p>
+              <p className="text-foreground/70">Fast, tracked delivery right to your doorstep across BD.</p>
             </div>
           </div>
         </div>

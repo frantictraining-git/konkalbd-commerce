@@ -16,7 +16,7 @@ export function Navbar() {
   const itemCount = items.reduce((acc, item) => acc + item.quantity, 0)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-accent/40 bg-background/90 backdrop-blur">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <button className="md:hidden p-2 -ml-2" aria-label="Menu">

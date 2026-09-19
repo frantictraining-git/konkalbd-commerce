@@ -32,10 +32,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Breadcrumbs */}
-      <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
+      <div className="flex items-center gap-2 text-sm text-foreground/50 mb-8">
         <Link href="/" className="hover:text-primary">Home</Link>
         <span>/</span>
-        <span className="text-gray-900 font-medium">{title}</span>
+        <span className="text-foreground font-medium">{title}</span>
       </div>
 
       <div className="flex flex-col md:flex-row gap-8">
@@ -49,7 +49,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <div className="hidden md:block space-y-6">
             <div>
               <h3 className="font-bold mb-4">Categories</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <ul className="space-y-2 text-sm text-foreground/70">
                 <li><Link href="/category/bestsellers" className={slug === 'bestsellers' ? 'font-bold text-primary' : 'hover:text-primary'}>Bestsellers</Link></li>
                 <li><Link href="/category/home-decor" className={slug === 'home-decor' ? 'font-bold text-primary' : 'hover:text-primary'}>Home Decor</Link></li>
                 <li><Link href="/category/figurines" className={slug === 'figurines' ? 'font-bold text-primary' : 'hover:text-primary'}>Figurines</Link></li>
@@ -58,7 +58,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             
             <div>
               <h3 className="font-bold mb-4">Price Range</h3>
-              <div className="flex flex-col gap-2 text-sm text-gray-600">
+              <div className="flex flex-col gap-2 text-sm text-foreground/70">
                 <label className="flex items-center gap-2">
                   <input type="checkbox" className="rounded text-primary focus:ring-primary" /> Under ৳ 1,000
                 </label>
@@ -77,13 +77,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <main className="flex-1">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-2xl md:text-3xl font-bold">{title}</h1>
-            <span className="text-sm text-gray-500">{MOCK_PRODUCTS.length} products</span>
+            <span className="text-sm text-foreground/50">{MOCK_PRODUCTS.length} products</span>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {MOCK_PRODUCTS.map((product) => (
               <Link href={`/product/${product.id}`} key={product.id} className="group flex flex-col gap-3">
-                <div className="aspect-[4/5] bg-gray-100 rounded-lg overflow-hidden relative border border-gray-200">
+                <div className="aspect-[4/5] bg-accent/20 rounded-lg overflow-hidden relative border border-accent/40">
                   <img 
                     src={product.image} 
                     alt={product.name} 
@@ -92,7 +92,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1">{product.name}</h3>
-                  <p className="text-sm text-gray-500">{product.variant}</p>
+                  <p className="text-sm text-foreground/50">{product.variant}</p>
                   <p className="mt-1 font-bold">৳ {product.price.toLocaleString()}</p>
                 </div>
               </Link>

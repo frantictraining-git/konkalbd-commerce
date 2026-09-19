@@ -3,11 +3,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfcfc;
-  --foreground: #0f172a; /* Navy */
-  --primary: #1e3a8a; /* Deep Navy */
+  --background: #050505; /* Pitch black with slight warmth */
+  --foreground: #f5f5f5; /* Premium off-white */
+  --primary: #e60000; /* Blood red from logo */
   --primary-foreground: #ffffff;
-  --accent: #facc15;
+  --accent: #262626; /* Dark gray for secondary elements */
 }
 
 @theme inline {
